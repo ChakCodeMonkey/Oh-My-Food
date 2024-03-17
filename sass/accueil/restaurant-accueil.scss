@@ -1,0 +1,77 @@
+@import '../variables/variable.scss';
+
+#restaurants {
+    height: 1226px;
+    background-color: $second-lightgrey;  
+    
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        padding: 48px 0 26px 20px;
+    }
+
+    .restaurants__list {
+
+        .restaurants__card {
+            margin: 0 18px 18px 18px;
+
+            img {
+                object-fit: cover;
+                box-sizing: border-box;
+                width: 100%;
+                height: 174px;
+                border-radius: 15px 15px 0 0;
+            }
+
+            .restaurants__card__nouveau {
+                color: $vert-fonce;
+                background-color: $vert-clair;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                right: 15px;
+                font-size: 14px;
+                font-weight: 500;
+                height: 29px;
+                border-radius: 2px;
+                padding: 0 9px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+                margin-right: 15px;
+                margin-top: 13px;
+            }
+
+            .restaurants__card__content {
+                height: 77px;
+                background-color: white;
+                margin-top: -5px;
+                box-shadow: 0px 4px 15px 0px #0000001A;
+                border-radius: 0 0 15px 15px;
+                padding-left: 13px;
+
+                .restaurants__card__title {
+                    padding-top: 16px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: black;
+                }
+
+                .restaurants__card__subtitle {
+                    padding-top: 5px;
+                    font-size: 17px;
+                    font-weight: 300;
+                    color: black;
+                }
+
+                .heart--normal {
+                    color: black;
+                    position: absolute;
+                    right: 42px;
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}
