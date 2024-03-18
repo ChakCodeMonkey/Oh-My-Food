@@ -25,6 +25,7 @@ header img {
   width: 162px;
 }
 
+/*SCSS INTRO*/
 #intro {
   z-index: 1;
   width: 100%;
@@ -62,16 +63,16 @@ header img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  height: 287px;
+  height: 250px;
 }
 #intro #reservation .reservation__titre {
   font-weight: 700;
-  margin: 39px 50px 0 50px;
+  margin-top: 39px;
 }
 #intro #reservation .reservation__texte {
   font-weight: 300;
   font-size: 18px;
-  margin: 11px 30px 0 30px;
+  margin-top: 11px;
   color: #353535;
 }
 #intro #reservation button {
@@ -90,6 +91,8 @@ header img {
   background: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 218, 0.737254902));
 }
 
+/*SCSS INTRO FIN*/
+/*SCSS FONCTION DEBUT*/
 #fonction {
   height: 392px;
   width: 100%;
@@ -151,6 +154,8 @@ header img {
   color: #9356DC;
 }
 
+/*SCSS FONCTION FIN*/
+/*SCSS RESTAURANT DEBUT*/
 #restaurants {
   height: 1226px;
   background-color: #f4f4f4;
@@ -214,4 +219,6 @@ header img {
   position: absolute;
   right: 42px;
   font-size: 22px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*SCSS RESTAURANT FIN*//*# sourceMappingURL=main.css.map */
