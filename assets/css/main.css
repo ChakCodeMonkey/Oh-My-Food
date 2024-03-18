@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&family=VT323&display=swap");
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -236,4 +237,34 @@ header img {
   font-size: 22px;
 }
 
-/*SCSS RESTAURANT FIN*//*# sourceMappingURL=main.css.map */
+/*SCSS RESTAURANT FIN*/
+footer {
+  height: 190px;
+  background-color: #353535;
+  color: white;
+}
+footer .footer__content {
+  padding: 22px;
+}
+footer .footer__content h3 {
+  font-size: 18px;
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+footer .footer__content p {
+  font-size: 16px;
+  margin-top: 7px;
+}
+footer .footer__content .footer__content__block {
+  margin-top: 15px;
+}
+footer .footer__content .footer__content__block .footer__content__block__texte {
+  display: flex;
+  align-items: center;
+}
+footer .footer__content .footer__content__block .footer__content__block__texte i {
+  height: 13px;
+  width: 12px;
+  margin-right: 12px;
+}/*# sourceMappingURL=main.css.map */

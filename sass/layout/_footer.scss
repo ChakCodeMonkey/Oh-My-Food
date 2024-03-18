@@ -1,4 +1,39 @@
 footer {
+    
+    height: 190px;
+    background-color: $light-black;
+    color: white;
 
-    height: 186px;
+    .footer__content {
+        padding: 22px;
+
+        h3{
+            font-size: 18px;
+            font-family: "Shrikhand", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        p{
+            font-size: 16px;
+            margin-top: 7px;
+        }
+
+        .footer__content__block {
+
+            margin-top: 15px;
+
+            .footer__content__block__texte {
+                display: flex;
+                align-items: center;
+                
+                
+                i{
+                    height: 13px;
+                    width: 12px;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
 }
