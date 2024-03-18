@@ -7,6 +7,22 @@
   margin: 0;
 }
 
+#intro button {
+  background: linear-gradient(#9356DC, #FF79DA);
+  height: 50px;
+  width: 218px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  margin-top: 31px;
+  cursor: pointer;
+}
+#intro button:hover {
+  background: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 218, 0.737254902));
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -25,7 +41,7 @@ header img {
   width: 162px;
 }
 
-/*SCSS INTRO*/
+/*SCSS INTRO DEBUT*/
 #intro {
   z-index: 1;
   width: 100%;
@@ -75,21 +91,6 @@ header img {
   margin-top: 11px;
   color: #353535;
 }
-#intro #reservation button {
-  background: linear-gradient(#9356DC, #FF79DA);
-  height: 50px;
-  width: 218px;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  font-size: 16px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  margin-top: 31px;
-  cursor: pointer;
-}
-#intro #reservation button:hover {
-  background: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 218, 0.737254902));
-}
 
 /*SCSS INTRO FIN*/
 /*SCSS FONCTION DEBUT*/
@@ -107,7 +108,7 @@ header img {
 #fonction .fonction__list .fonction__list__element {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   margin-bottom: 24px;

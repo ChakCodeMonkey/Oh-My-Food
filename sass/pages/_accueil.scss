@@ -1,6 +1,6 @@
 @import '../abstracts/variable.scss';
 
-/*SCSS INTRO*/
+/*SCSS INTRO DEBUT*/
 
 #intro {
     z-index: 1;
@@ -52,23 +52,6 @@
             margin-top: 11px;
             color: $light-black;
         }
-
-        button {
-            background: linear-gradient(#9356DC, #FF79DA);
-            height: 50px;
-            width: 218px;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            font-size: 16px;
-            box-shadow: 0px 4px 10px 0px #00000040;
-            margin-top: 31px;
-            cursor: pointer;
-
-            &:hover {
-                background: linear-gradient(#9256dcbc, #FF79DAbc);
-            }
-        }
     }
 }
 
@@ -91,7 +74,7 @@
         .fonction__list__element {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             width: 100%;
             margin-bottom: 24px;
