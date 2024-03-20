@@ -80,19 +80,6 @@
             margin-bottom: 24px;
             height: 72px;
 
-            .fonction__list__element__nombre {
-                background-color: $purple;
-                color: white;
-                width: 24px;
-                height: 24px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 25px;
-                position: absolute;
-                left: 20px;
-            }
-
             .fonction__list__button {
                 display: flex;
                 align-items: center;
@@ -109,6 +96,19 @@
                     display: flex;
                     justify-content: flex-start;
                     flex-direction: row;
+
+                    .fonction__list__element__nombre {
+                        background-color: $purple;
+                        color: white;
+                        width: 24px;
+                        height: 24px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 25px;
+                        margin-left: -15px;
+                        left: 20px;
+                    }
 
                     i {
                         color: $hard-grey;
@@ -131,7 +131,31 @@
         }
     }
 
+    @media (min-width: 425px) {
 
+        .fonction__list {
+            .fonction__list__element {
+                .fonction__list__button {
+                    width: 325px;    
+                }    
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        max-width: 1053px;
+        height: 250px;
+
+        .fonction__list {
+            flex-direction: row;
+            .fonction__list__element{
+                .fonction__list__button {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 /*SCSS FONCTION FIN*/
@@ -140,6 +164,7 @@
 
 #restaurants {
     height: 1226px;
+    width: 100%;
     background-color: $second-lightgrey;  
     
     a {
@@ -217,11 +242,17 @@
                 display: flex;
                 align-items: center;
                 
-                .heart--normal {
+                .heart--normal,
+                .heart--full {
                     color: black;
                     position: absolute;
                     right: 42px;
                     font-size: 22px;
+                }
+
+                .heart--full {
+                    position: absolute;
+                    z-index: 3;
                 }
             }
         }
