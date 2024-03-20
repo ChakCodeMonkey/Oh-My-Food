@@ -165,17 +165,43 @@
 #restaurants {
     height: 1226px;
     width: 100%;
-    background-color: $second-lightgrey;  
+    background-color: $second-lightgrey; 
+    margin-left: 20px; 
+    margin-right: 20px; 
+    
+    @media (min-width: 1024px) {
+        display: flex;//
+        justify-content: center;//
+        height: 700px;      
+    }
+
+    .swag {
+        max-width: 1053px;
+    }
     
     a {
         text-decoration: none;
+
+        @media (min-width: 1024px) {
+            width: 50%;
+            margin-bottom: 25px;         
+        }
     }
 
     h2 {
         padding: 48px 0 26px 20px;
+        max-width: 1053px;
     }
 
     .restaurants__list {
+
+        @media (min-width: 1024px) {
+            display: flex;//
+           justify-content: space-between;//          
+        }
+        
+        width: 100%;
+        flex-wrap: wrap;
 
         .restaurants__card {
             margin: 0 18px 18px 18px;
@@ -188,6 +214,7 @@
             box-shadow: 0px 4px 15px 0px #0000001A;
             border-radius: 15px;
             height: 248px;
+            z-index: 2;
 
             img {
                 object-fit: cover;
@@ -243,16 +270,13 @@
                 align-items: center;
                 
                 .heart--normal,
-                .heart--full {
+                .heart--full,
+                input {
                     color: black;
                     position: absolute;
                     right: 42px;
                     font-size: 22px;
-                }
-
-                .heart--full {
-                    position: absolute;
-                    z-index: 3;
+                    z-index: 20;
                 }
             }
         }
