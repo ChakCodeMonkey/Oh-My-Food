@@ -163,7 +163,7 @@
 /*SCSS RESTAURANT DEBUT*/
 
 #restaurants {
-    height: 1226px;
+    height: 1226px ;
     width: 100%;
     background-color: $second-lightgrey; 
     margin-left: 20px; 
@@ -175,112 +175,164 @@
         height: 700px;      
     }
 
-    .swag {
-        max-width: 1053px;
-    }
-    
-    a {
-        text-decoration: none;
-
-        @media (min-width: 1024px) {
-            width: 50%;
-            margin-bottom: 25px;         
-        }
-    }
-
-    h2 {
-        padding: 48px 0 26px 20px;
-        max-width: 1053px;
-    }
-
-    .restaurants__list {
-
-        @media (min-width: 1024px) {
-            display: flex;//
-           justify-content: space-between;//          
-        }
-        
+    .restaurants__list__content{
         width: 100%;
-        flex-wrap: wrap;
+        max-width: 1080px;
 
-        .restaurants__card {
-            margin: 0 18px 18px 18px;
-            display: grid;
-            grid-template-columns: 80% 1fr;
-            grid-template-rows: 70% 1fr;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            background-color: white;
-            box-shadow: 0px 4px 15px 0px #0000001A;
-            border-radius: 15px;
-            height: 248px;
-            z-index: 2;
+        h2{
+            margin: 30px 0 12px 20px;
 
-            img {
-                object-fit: cover;
-                box-sizing: border-box;
-                width: 100%;
-                height: 174px;
-                border-radius: 15px 15px 0 0;
-                grid-area: 1 / 1 / 2 / 3;
+        }
+
+        .restaurants__list {
+            width: calc(100% - 40px);
+
+            @media (min-width: 1024px) {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 20px;  
             }
 
-            .restaurants__card__nouveau {
-                color: $vert-fonce;
+            article {
+                display: grid; 
+                grid-template-columns: 80% 20%; 
+                grid-template-rows: 70% 1fr; 
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+                width: 100%;
+                background-color: white;
+                color: black;
+                text-decoration: none;
+                height: 251px;
+                border-radius: 15px;
+                width: 100%;
+                margin: 18px 20px 0 20px;
+                position: relative;
+
+                @media (min-width: 1024px) {
+                    width: 45%;   
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    grid-area: 1 / 1 / 1 / 3;
+                    
+                    .card-txt{
+
+                        grid-area: 2 / 1 / 3 / 2;
+
+                        .restaurants__card__title{
+                            
+                        }
+                    }
+
+                    img {
+                        grid-area: 1 / 1 / 2 / 3;
+                        object-fit: cover;
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: 174px;
+                        border-radius: 15px 15px 0 0; 
+                    }
+
+                    .card-txt {
+                        grid-area: 2 / 1 / 3 / 2;
+                        margin-left: 15px;
+                        align-self: center;
+                        
+                        h3 {
+                            margin-top: 10px;
+                        }
+
+                        p {
+                            margin-top: 5px;
+                        }
+                    }
+                }
+
+                .restaurants__card__nouveau{
+                    color: $vert-fonce;
                 background-color: $vert-clair;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                position: absolute;
-                right: 15px;
                 font-size: 14px;
                 font-weight: 500;
                 height: 29px;
+                width: 50px;
                 border-radius: 2px;
                 padding: 0 9px;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-                margin-right: 15px;
                 margin-top: 13px;
+                justify-self: center;
                 grid-area: 1 / 2 / 2 / 3;
-            }
-
-            .card-txt {
-                grid-area: 2 / 1 / 3 / 2;
-
-                .restaurants__card__title {
-                    padding-top: 16px;
-                    font-size: 18px;
-                    font-weight: 700;
-                    color: black;
-                    padding-left: 13px;
+                z-index: 2;
+                position: absolute;
+                right: 15px;
                 }
-    
-                .restaurants__card__subtitle {
-                    padding-top: 5px;
-                    font-size: 17px;
-                    font-weight: 300;
-                    color: black;
-                    padding-left: 13px;
-                }
-            }
 
-            .card__heart {
-                grid-area: 2 / 2 / 3 / 3;
-                display: flex;
-                align-items: center;
-                
-                .heart--normal,
+                input,
                 .heart--full,
-                input {
-                    color: black;
+                .heart--normal {
+                    grid-area: 2 / 2 / 3 / 3;
+                    width: 28px;
+                    height: 28px;
+                    font-size: 28px;
+                    right: 15px;
+                    align-self: center;
+                    right: 15px;
                     position: absolute;
-                    right: 42px;
-                    font-size: 22px;
-                    z-index: 20;
                 }
+
+
+                input {
+
+                    z-index: 3;
+                    width: 28px;
+                    height: 28px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+
+            .heart--normal,
+            .heart--full {
+                font-size: 28px;
+                transition: opacity 0.4s ease; 
+            }
+
+            .heart--normal {
+                z-index: 2;
+                opacity: 1;
+            }
+
+            .heart--full {
+                z-index: 1;
+                opacity: 0;
+                background: linear-gradient(#9256dcbc, #FF79DAbc); 
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            input:checked ~ .heart--normal {
+                opacity: 0; 
+            }
+
+            input:checked ~ .heart--full {
+                opacity: 1;
+            }
+
+
+
+                
+
             }
         }
     }
+    
 }
 
 /*SCSS RESTAURANT FIN*/

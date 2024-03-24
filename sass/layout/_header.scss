@@ -16,4 +16,14 @@ header {
     img {
         width: 162px; 
     }
+
+    a {
+        position: absolute;
+        left: 20px;
+        color: black;
+
+        i {
+            font-size: 24px;
+        }
+    }
 }
