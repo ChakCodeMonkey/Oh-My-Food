@@ -92,10 +92,17 @@
                 border-radius: 20px; 
                 box-shadow: 0px 4px 15px 0px #00000026;
 
+                @media screen and (min-width: 768px) and (max-width: 1023px) {
+        
+                    margin-right: 10px;
+
+                }
+
                 .fonction__list__button__content {
                     display: flex;
                     justify-content: flex-start;
                     flex-direction: row;
+                    align-items: center;
 
                     .fonction__list__element__nombre {
                         background-color: $purple;
@@ -113,12 +120,25 @@
                     i {
                         color: $hard-grey;
                         margin-left: 32px;
+
+                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+        
+                            margin-left: 10px;
+
+                        }
                     }
 
                     p {
                         font-weight: 500;
                         margin-left: 27px;
-                        padding-right: 05px;
+                        padding-right: 5px;
+
+                        @media screen and (min-width: 768px) and (max-width: 1023px) {
+        
+                            margin-left: 10px;
+                            font-size: 14px;
+
+                        }
                     }
                 }
 
@@ -142,7 +162,8 @@
         }
     }
 
-    @media (min-width: 1024px) {
+
+    @media (min-width: 768px) {
 
         max-width: 1053px;
         height: 250px;
@@ -169,7 +190,7 @@
     margin-left: 20px; 
     margin-right: 20px; 
     
-    @media (min-width: 1024px) {
+    @media (min-width: 760px) {
         display: flex;//
         justify-content: center;//
         height: 700px;      
@@ -188,152 +209,13 @@
 
             width: calc(100% - 40px);
 
-            @media (min-width: 1024px) {
-              width: 100%;  
-            }
-
-            @media (min-width: 1024px) {
+            @media (min-width: 760px) {
                 display: flex;
                 justify-content: space-between;
+                flex-direction: row;
                 flex-wrap: wrap;
-                gap: 20px;  
-            }
-
-            article {
-                display: grid; 
-                grid-template-columns: 80% 20%; 
-                grid-template-rows: 70% 1fr; 
-                grid-column-gap: 0px;
-                grid-row-gap: 0px;
-                width: 100%;
-                background-color: white;
-                color: black;
-                text-decoration: none;
-                height: 251px;
-                border-radius: 15px;
-                width: 100%;
-                margin: 18px 20px 0 20px;
-                position: relative;
-
-                @media (min-width: 1024px) {
-                    width: 45%;   
-                }
-
-                a {
-                    color: black;
-                    text-decoration: none;
-                    grid-area: 1 / 1 / 1 / 3;
-                    
-                    .card-txt{
-
-                        grid-area: 2 / 1 / 3 / 2;
-
-                        .restaurants__card__title{
-                            
-                        }
-                    }
-
-                    img {
-                        grid-area: 1 / 1 / 2 / 3;
-                        object-fit: cover;
-                        box-sizing: border-box;
-                        width: 100%;
-                        height: 174px;
-                        border-radius: 15px 15px 0 0; 
-                    }
-
-                    .card-txt {
-                        grid-area: 2 / 1 / 3 / 2;
-                        margin-left: 15px;
-                        align-self: center;
-                        
-                        h3 {
-                            margin-top: 10px;
-                        }
-
-                        p {
-                            margin-top: 5px;
-                        }
-                    }
-                }
-
-                .restaurants__card__nouveau{
-                    color: $vert-fonce;
-                background-color: $vert-clair;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 14px;
-                font-weight: 500;
-                height: 29px;
-                width: 50px;
-                border-radius: 2px;
-                padding: 0 9px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-                margin-top: 13px;
-                justify-self: center;
-                grid-area: 1 / 2 / 2 / 3;
-                z-index: 2;
-                position: absolute;
-                right: 15px;
-                }
-
-                input,
-                .heart--full,
-                .heart--normal {
-                    grid-area: 2 / 2 / 3 / 3;
-                    width: 28px;
-                    height: 28px;
-                    font-size: 28px;
-                    right: 15px;
-                    align-self: center;
-                    right: 15px;
-                    position: absolute;
-                }
-
-
-                input {
-
-                    z-index: 3;
-                    width: 28px;
-                    height: 28px;
-                    opacity: 0;
-                    cursor: pointer;
-                }
-
-
-            .heart--normal,
-            .heart--full {
-                font-size: 28px;
-                transition: opacity 0.4s ease; 
-            }
-
-            .heart--normal {
-                z-index: 2;
-                opacity: 1;
-            }
-
-            .heart--full {
-                z-index: 1;
-                opacity: 0;
-                background: linear-gradient(#9256dcbc, #FF79DAbc); 
-                -webkit-background-clip: text;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-            }
-
-            input:checked ~ .heart--normal {
-                opacity: 0; 
-            }
-
-            input:checked ~ .heart--full {
-                opacity: 1;
-            }
-
-
-
-                
-
+                margin: 20px;
+                 
             }
         }
     }
