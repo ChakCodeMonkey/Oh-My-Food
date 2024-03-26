@@ -303,11 +303,6 @@ header a i {
   border-radius: 20px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1490196078);
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  #fonction .fonction__list .fonction__list__element .fonction__list__button {
-    margin-right: 10px;
-  }
-}
 #fonction .fonction__list .fonction__list__element .fonction__list__button .fonction__list__button__content {
   display: flex;
   justify-content: flex-start;
@@ -343,7 +338,6 @@ header a i {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #fonction .fonction__list .fonction__list__element .fonction__list__button .fonction__list__button__content p {
     margin-left: 10px;
-    font-size: 14px;
   }
 }
 #fonction .fonction__list .fonction__list__element .fonction__list__button:hover i {
@@ -408,74 +402,69 @@ footer {
   height: 190px;
   background-color: #353535;
   color: white;
+  width: 100%;
 }
-@media (min-width: 1024px) {
+@media (min-width: 760px) {
   footer {
     height: 110px;
-  }
-}
-footer .footer__content {
-  padding: 22px;
-}
-@media (min-width: 1024px) {
-  footer .footer__content {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 60px 35px 20px 0;
   }
-  footer .footer__content .footer__content__forreverse {
+  footer .footer__content__forreverse {
     display: flex;
+    margin-top: 22px;
   }
-  footer .footer__content .mentions {
+  footer .mentions {
     display: flex;
     flex-direction: row;
-    margin-right: 70px;
+    margin-right: 35px;
   }
 }
-footer .footer__content h3 {
+footer h3 {
   font-size: 18px;
   font-family: "Shrikhand", serif;
   font-weight: 400;
   font-style: normal;
+  margin: 22px 22px 0 19px;
 }
 @media (min-width: 1024px) {
-  footer .footer__content h3 {
+  footer h3 {
     display: flex;
     align-items: center;
   }
 }
-footer .footer__content p {
+footer p {
   font-size: 16px;
   margin-top: 7px;
 }
-@media (min-width: 1024px) {
-  footer .footer__content p {
+@media (min-width: 760px) {
+  footer p {
     margin-top: 0;
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
-footer .footer__content .footer__content__block {
+footer .footer__content__block {
   margin-top: 15px;
 }
-@media (min-width: 1024px) {
-  footer .footer__content .footer__content__block {
+@media (min-width: 760px) {
+  footer .footer__content__block {
     display: flex;
     flex-direction: row;
     margin-top: 0;
-    margin-right: 25px;
+    margin-right: 20px;
   }
 }
-footer .footer__content .footer__content__block .footer__content__block__texte {
+footer .footer__content__block .footer__content__block__texte {
   display: flex;
   align-items: center;
 }
-@media (min-width: 1024px) {
-  footer .footer__content .footer__content__block .footer__content__block__texte {
+@media (min-width: 760px) {
+  footer .footer__content__block .footer__content__block__texte {
     margin-right: 5px;
   }
 }
-footer .footer__content .footer__content__block .footer__content__block__texte i {
+footer .footer__content__block .footer__content__block__texte i {
   height: 13px;
   width: 12px;
   margin-right: 12px;
