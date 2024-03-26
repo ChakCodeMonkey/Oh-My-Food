@@ -404,6 +404,9 @@ footer {
   color: white;
   width: 100%;
 }
+footer .mentions {
+  margin-left: 15px;
+}
 @media (min-width: 760px) {
   footer {
     height: 110px;
@@ -418,7 +421,8 @@ footer {
   footer .mentions {
     display: flex;
     flex-direction: row;
-    margin-right: 35px;
+    margin-right: 34px;
+    margin-left: 0;
   }
 }
 footer h3 {
@@ -446,6 +450,7 @@ footer p {
 }
 footer .footer__content__block {
   margin-top: 15px;
+  margin-left: 15px;
 }
 @media (min-width: 760px) {
   footer .footer__content__block {
@@ -453,6 +458,7 @@ footer .footer__content__block {
     flex-direction: row;
     margin-top: 0;
     margin-right: 20px;
+    margin-left: 0;
   }
 }
 footer .footer__content__block .footer__content__block__texte {
