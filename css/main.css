@@ -681,7 +681,7 @@ footer {
   width: 100px;
   height: 100px;
   border: double 10px #9356DC;
-  border-bottom: dotted 10px #FF79DA;
+  border-bottom: double 10px #FF79DA;
   border-radius: 50%;
   animation: rotation 1.5s ease 2;
   display: flex;
@@ -693,6 +693,7 @@ footer {
   font-weight: bold;
   z-index: 11;
   position: absolute;
+  animation: fadeIn 3s forwards;
 }
 @keyframes rotation {
   0% {
@@ -707,7 +708,7 @@ footer {
     opacity: 1;
     visibility: visible;
   }
-  75% {
+  80% {
     opacity: 1;
     visibility: visible;
   }
