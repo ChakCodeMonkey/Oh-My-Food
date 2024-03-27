@@ -448,6 +448,18 @@ footer p {
     margin-right: 10px;
   }
 }
+footer p a {
+  font-size: 16px;
+  margin-top: 7px;
+  color: white;
+  text-decoration: none;
+}
+@media (min-width: 760px) {
+  footer p a {
+    margin-top: 0;
+    margin-right: 10px;
+  }
+}
 footer .footer__content__block {
   margin-top: 15px;
   margin-left: 15px;
