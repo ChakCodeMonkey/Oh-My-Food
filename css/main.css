@@ -689,7 +689,7 @@ footer {
   align-items: center;
 }
 #loader p {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   z-index: 11;
   position: absolute;
