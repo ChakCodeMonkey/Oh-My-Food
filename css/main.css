@@ -110,7 +110,7 @@ main {
 }
 .card input,
 .card .heart--full,
-.card .heart--normal {
+.card .heart--empty {
   grid-area: 2/2/3/3;
   width: 28px;
   height: 28px;
@@ -119,36 +119,6 @@ main {
   align-self: center;
   right: 15px;
   position: absolute;
-}
-.card input {
-  z-index: 3;
-  width: 28px;
-  height: 28px;
-  opacity: 0;
-  cursor: pointer;
-}
-.card .heart--normal,
-.card .heart--full {
-  font-size: 28px;
-  transition: opacity 0.4s ease;
-}
-.card .heart--normal {
-  z-index: 2;
-  opacity: 1;
-}
-.card .heart--full {
-  z-index: 1;
-  opacity: 0;
-  background: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 218, 0.737254902));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.card input:checked ~ .heart--normal {
-  opacity: 0;
-}
-.card input:checked ~ .heart--full {
-  opacity: 1;
 }
 
 /* COEUR MENU*/
@@ -159,25 +129,16 @@ main {
   width: 22px;
   justify-content: center;
 }
-.coeur input {
-  position: absolute;
-  z-index: 3;
-  width: 28px;
-  height: 28px;
+
+input:checked ~ .heart--empty {
   opacity: 0;
-  cursor: pointer;
 }
-.coeur .heart--empty,
-.coeur .heart--full {
-  position: absolute;
-  font-size: 28px;
-  transition: opacity 0.4s ease;
-}
-.coeur .heart--empty {
-  z-index: 2;
+
+input:checked ~ .heart--full {
   opacity: 1;
 }
-.coeur .heart--full {
+
+.heart--full {
   z-index: 1;
   opacity: 0;
   background: linear-gradient(rgba(146, 86, 220, 0.737254902), rgba(255, 121, 218, 0.737254902));
@@ -185,11 +146,26 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.coeur input:checked ~ .heart--empty {
-  opacity: 0;
-}
-.coeur input:checked ~ .heart--full {
+
+.heart--empty {
+  z-index: 2;
   opacity: 1;
+}
+
+.heart--empty,
+.heart--full {
+  position: absolute;
+  font-size: 28px;
+  transition: opacity 0.4s ease;
+}
+
+input {
+  position: absolute;
+  z-index: 3;
+  width: 28px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
 }
 
 header {

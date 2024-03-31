@@ -109,7 +109,7 @@
 
     input,
     .heart--full,
-    .heart--normal {
+    .heart--empty {
         grid-area: 2 / 2 / 3 / 3;
         width: 28px;
         height: 28px;
@@ -119,50 +119,6 @@
         right: 15px;
         position: absolute;
     }
-
-
-    input {
-
-        z-index: 3;
-        width: 28px;
-        height: 28px;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-
-    .heart--normal,
-    .heart--full {
-        font-size: 28px;
-        transition: opacity 0.4s ease; 
-    }
-
-    .heart--normal {
-        z-index: 2;
-        opacity: 1;
-    }
-
-    .heart--full {
-        z-index: 1;
-        opacity: 0;
-        background: linear-gradient(#9256dcbc, #FF79DAbc); 
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    input:checked ~ .heart--normal {
-        opacity: 0; 
-    }
-
-    input:checked ~ .heart--full {
-        opacity: 1;
-    }
-
-
-
-    
-
 }
 
 
@@ -174,42 +130,43 @@
     height: 22px;
     width: 22px;
     justify-content: center;
+}
 
-    input {
-        position: absolute;
-        z-index: 3;
-        width: 28px;
-        height: 28px;
-        opacity: 0;
-        cursor: pointer;
-    }
 
-    .heart--empty,
-    .heart--full {
-        position: absolute;
-        font-size: 28px;
-        transition: opacity 0.4s ease; 
-    }
+input:checked ~ .heart--empty {
+    opacity: 0; 
+}
 
-    .heart--empty {
-        z-index: 2;
-        opacity: 1;
-    }
+input:checked ~ .heart--full {
+    opacity: 1;
+}
 
-    .heart--full {
-        z-index: 1;
-        opacity: 0;
-        background: linear-gradient(#9256dcbc, #FF79DAbc); 
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+.heart--full {
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(#9256dcbc, #FF79DAbc); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    input:checked ~ .heart--empty {
-        opacity: 0; 
-    }
+.heart--empty {
+    z-index: 2;
+    opacity: 1;
+}
 
-    input:checked ~ .heart--full {
-        opacity: 1;
-    }
+.heart--empty,
+.heart--full {
+    position: absolute;
+    font-size: 28px;
+    transition: opacity 0.4s ease; 
+}
+
+input {
+    position: absolute;
+    z-index: 3;
+    width: 28px;
+    height: 28px;
+    opacity: 0;
+    cursor: pointer;
 }
