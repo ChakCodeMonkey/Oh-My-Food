@@ -159,7 +159,7 @@ input:checked ~ .heart--full {
   transition: opacity 0.4s ease;
 }
 
-input {
+#inputHeart {
   position: absolute;
   z-index: 3;
   width: 28px;
@@ -177,6 +177,11 @@ header {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
   position: relative;
   z-index: 2;
+}
+@media (min-width: 768px) {
+  header {
+    box-shadow: none;
+  }
 }
 header h1 {
   display: flex;
@@ -210,20 +215,25 @@ header a i {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
   position: relative;
 }
+@media (min-width: 768px) {
+  #intro .location {
+    box-shadow: none;
+  }
+}
 #intro .location i {
   color: #353535;
   margin-right: 20px;
 }
-#intro .location input {
+#intro .location #locationInput {
   border: none;
   background-color: transparent;
   width: 109px;
   font-size: 16px;
 }
-#intro .location input::-moz-placeholder {
+#intro .location #locationInput::-moz-placeholder {
   color: #353535;
 }
-#intro .location input::placeholder {
+#intro .location #locationInput::placeholder {
   color: #353535;
 }
 #intro #reservation {
