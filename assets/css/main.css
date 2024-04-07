@@ -159,7 +159,7 @@ input:checked ~ .heart--full {
   transition: opacity 0.4s ease;
 }
 
-#inputHeart {
+.inputHeart {
   position: absolute;
   z-index: 3;
   width: 28px;
@@ -512,8 +512,11 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 35px 17px 0 17px;
+  margin-top: 35px;
   height: 20px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 634px;
 }
 #menu .resto__title h2 {
   font-size: 28px;
@@ -521,6 +524,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin-right: 40px;
+  margin-left: 17px;
 }
 #menu .resto__title .coeur {
   display: flex;
@@ -528,6 +532,7 @@ body {
   height: 22px;
   width: 22px;
   justify-content: center;
+  margin-right: 17px;
 }
 #menu .resto__title .coeur input {
   position: absolute;
@@ -561,6 +566,11 @@ body {
 #menu .resto__title .coeur input:checked ~ .heart--full {
   opacity: 1;
 }
+@media (min-width: 768px) {
+  #menu .resto__title {
+    justify-content: center;
+  }
+}
 #menu .menu__block {
   margin-top: 40px;
   display: flex;
@@ -572,7 +582,7 @@ body {
   margin-left: 14px;
   width: 50px;
 }
-#menu .menu__block .menu__choix h2 {
+#menu .menu__block .menu__choix h3 {
   font-weight: 300;
   font-size: 16px;
 }
@@ -605,7 +615,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
-#menu .menu__block .block__plat .block__plat__content h3 {
+#menu .menu__block .block__plat .block__plat__content h4 {
   font-weight: 500;
   font-size: 18px;
   white-space: nowrap;
@@ -646,6 +656,13 @@ body {
   font-size: 20px;
   color: white;
   border-radius: 0 15px 15px 0;
+}
+@media (min-width: 768px) {
+  #menu {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 }
 
 footer {

@@ -162,7 +162,7 @@ input:checked ~ .heart--full {
     transition: opacity 0.4s ease; 
 }
 
-#inputHeart {
+.inputHeart {
     position: absolute;
     z-index: 3;
     width: 28px;
